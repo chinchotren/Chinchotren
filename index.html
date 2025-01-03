@@ -16,7 +16,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url('foto plaza rio.jpg');
+            background-image: url('mural.jpg'); /* Updated background image */
             position: relative;
         }
         .bg::before {
@@ -111,23 +111,14 @@
     <div class="bg">
         <div class="container">
             <h1>Nuestro Paseo</h1>
-            <p></p>
+            <p>Explora Caguas y Río Piedras en nuestro mapa interactivo.</p>
             <div class="button-container">
-                <button class="button" onclick="navigateToMap('interactive-map')">Caguas</button>
-                <button class="button" onclick="navigateToMap('indexriointro')">Río Piedras</button>
+                <!-- Updated links -->
+                <a class="button" href="https://landstudiopr.github.io/Caguasmap/">Caguas</a>
+                <a class="button" href="https://landstudiopr.github.io/Riopiedrasmap/">Río Piedras</a>
             </div>
         </div>
         <img src="icono.png" alt="Imagen decorativa" class="bottom-image">
     </div>
-
-    <script>
-        function navigateToMap(option) {
-            if(option === 'interactive-map') {
-                window.location.href = 'map.html';
-            } else if(option === 'indexriointro') {
-                window.location.href = 'indexriointro.html';
-            }
-        }
-    </script>
 </body>
 </html>

@@ -16,7 +16,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url('mural.jpeg'); /* Updated to mural.jpeg */
+            background-image: url('mural.jpeg'); /* Background image */
             position: relative;
         }
         .bg::before {
@@ -58,23 +58,19 @@
             flex-wrap: wrap;
         }
         .button {
-            position: relative;
-            width: calc(100% - 40px);
-            max-width: 300px;
-            height: 66px;
+            display: inline-block;
+            width: 150px; /* Fixed width */
+            height: 50px; /* Fixed height */
+            line-height: 50px; /* Vertically center text */
             background: linear-gradient(0deg, #08BEF8, #08BEF8), #FFB001;
             box-shadow: 0px 4px 20px rgba(255, 165, 2, 0.5);
             border-radius: 20px;
             color: #fff;
-            border: none;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            font-family: 'Titan One', sans-serif;
-            text-decoration: none;
             text-align: center;
-            line-height: 36px;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Titan One', sans-serif;
+            cursor: pointer;
         }
         .button:hover {
             background: linear-gradient(0deg, #06A5D0, #06A5D0), #FFA500;
@@ -96,7 +92,6 @@
             }
             .button {
                 font-size: 18px;
-                width: auto;
             }
             .bottom-image {
                 width: 25%;

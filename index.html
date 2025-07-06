@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chincho-Tren</title>
-  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
       height: 100%;
+      margin: 0;
       font-family: 'Titan One', sans-serif;
       overflow: hidden;
     }
@@ -37,8 +36,11 @@
 
     .overlay {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.7);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
       z-index: -1;
     }
 
@@ -52,25 +54,28 @@
     }
 
     .container {
+      text-align: center;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
       z-index: 1;
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 36px;
       margin-bottom: 20px;
-      text-shadow: 2px 2px 5px black;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 30px;
-      text-shadow: 1px 1px 4px black;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     .button-container {
@@ -82,8 +87,8 @@
 
     .button {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       width: 180px;
       height: 50px;
       background-color: #ECAB29;
@@ -100,35 +105,38 @@
 
     .button:hover,
     .button:active {
-      background-color: #ECAB29; /* mismo color al pasar o hacer clic */
+      background-color: #ECAB29;
     }
 
     @media (min-width: 768px) {
-      h1 { font-size: 48px; }
-      p { font-size: 22px; }
+      h1 { font-size: 42px; }
+      p { font-size: 20px; }
       .button { font-size: 18px; }
     }
 
     @media (min-width: 1024px) {
-      .container { top: 45%; }
+      .container {
+        top: 40%;
+        padding-bottom: 250px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- LOGO SUPERIOR IZQUIERDO -->
+  <!-- Logo -->
   <img src="logochincho.jpg" alt="Logo Chincho-Tren" class="logo" />
 
-  <!-- SLIDESHOW DE FONDO -->
+  <!-- Fondo slideshow -->
   <div class="slideshow">
     <div class="slide active" style="background-image: url('trenurbano.jpg');"></div>
     <div class="slide" style="background-image: url('imagenTren1.jpg');"></div>
   </div>
 
-  <!-- CAPA OSCURA PARA CONTRASTE -->
+  <!-- Capa oscura -->
   <div class="overlay"></div>
 
-  <!-- CONTENIDO CENTRAL -->
+  <!-- Contenido -->
   <div class="container">
     <h1>Chincho-Tren</h1>
     <p>Resuelve, comparte y disfruta</p>
@@ -138,7 +146,7 @@
     </div>
   </div>
 
-  <!-- SCRIPT PARA ROTAR IMÁGENES -->
+  <!-- Script para rotación de imágenes -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let current = 0;
@@ -147,7 +155,7 @@
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
-    }, 5000);
+    }, 5000); // cambia cada 5 segundos
   </script>
 
 </body>

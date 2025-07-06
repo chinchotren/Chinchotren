@@ -91,26 +91,44 @@
       color: #fff;
       text-decoration: none;
       font-size: 16px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: background-color 0.3s;
+      font-family: 'Titan One', sans-serif;
+      cursor: pointer;
+      border: none;
+      box-shadow: none;
+      transition: none;
     }
 
-    .button:hover {
-      background-color: #D99A20;
+    .button:hover,
+    .button:active {
+      background-color: #ECAB29; /* mismo color al pasar o hacer clic */
+    }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 48px; }
+      p { font-size: 22px; }
+      .button { font-size: 18px; }
+    }
+
+    @media (min-width: 1024px) {
+      .container { top: 45%; }
     }
   </style>
 </head>
 <body>
 
+  <!-- LOGO SUPERIOR IZQUIERDO -->
   <img src="logochincho.jpg" alt="Logo Chincho-Tren" class="logo" />
 
+  <!-- SLIDESHOW DE FONDO -->
   <div class="slideshow">
     <div class="slide active" style="background-image: url('trenurbano.jpg');"></div>
     <div class="slide" style="background-image: url('imagenTren1.jpg');"></div>
   </div>
 
+  <!-- CAPA OSCURA PARA CONTRASTE -->
   <div class="overlay"></div>
 
+  <!-- CONTENIDO CENTRAL -->
   <div class="container">
     <h1>Chincho-Tren</h1>
     <p>Resuelve, comparte y disfruta</p>
@@ -120,6 +138,7 @@
     </div>
   </div>
 
+  <!-- SCRIPT PARA ROTAR IMÁGENES -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let current = 0;

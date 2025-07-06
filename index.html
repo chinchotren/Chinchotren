@@ -1,122 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a Nuestro Mapa Interactivo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Titan One', sans-serif;
-        }
-        .bg {
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url('mural.jpeg'); /* Background image */
-            position: relative;
-        }
-        .bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
-        }
-        .container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            padding: 20px;
-            box-sizing: border-box;
-            width: 100%;
-            z-index: 1;
-            padding-bottom: 200px;
-        }
-        h1 {
-            font-size: 36px;
-            margin: 0 0 20px 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-        p {
-            font-size: 18px;
-            margin: 0 0 20px 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .button {
-            display: inline-block;
-            width: 150px; /* Fixed width */
-            height: 50px; /* Fixed height */
-            line-height: 50px; /* Vertically center text */
-            background: linear-gradient(0deg, #08BEF8, #08BEF8), #FFB001;
-            box-shadow: 0px 4px 20px rgba(255, 165, 2, 0.5);
-            border-radius: 20px;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            font-family: 'Titan One', sans-serif;
-            cursor: pointer;
-        }
-        .button:hover {
-            background: linear-gradient(0deg, #06A5D0, #06A5D0), #FFA500;
-        }
-        .bottom-image {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50%;
-            opacity: 0.8;
-        }
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 42px;
-            }
-            p {
-                font-size: 20px;
-            }
-            .button {
-                font-size: 18px;
-            }
-            .bottom-image {
-                width: 25%;
-            }
-        }
-        @media (min-width: 1024px) {
-            .container {
-                top: 40%;
-                padding-bottom: 250px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenido a Nuestro Mapa Interactivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Titan One', sans-serif;
+    }
+
+    .bg {
+      height: 100%;
+      background: url('ImagenTren (1).jpg') center/cover no-repeat;
+      position: relative;
+    }
+
+    .bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      width: 100%;
+      z-index: 1;
+      box-sizing: border-box;
+      padding-bottom: 200px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      width: 150px;
+      height: 50px;
+      line-height: 50px;
+      background: linear-gradient(0deg, #08BEF8, #08BEF8);
+      box-shadow: 0 4px 20px rgba(255, 165, 2, 0.5);
+      border-radius: 20px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: linear-gradient(0deg, #06A5D0, #06A5D0);
+    }
+
+    .bottom-image {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      opacity: 0.8;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 42px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .button {
+        font-size: 18px;
+      }
+
+      .bottom-image {
+        width: 25%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        top: 40%;
+        padding-bottom: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="bg">
-        <div class="container">
-            <h1>Nuestro Paseo</h1>
-            <p>Explora Caguas y Río Piedras en nuestro mapa interactivo.</p>
-            <div class="button-container">
-                <!-- Updated links -->
-                <a class="button" href="https://landstudiopr.github.io/Caguasmap/">Caguas</a>
-                <a class="button" href="https://landstudiopr.github.io/Riopiedrasmap/">Río Piedras</a>
-            </div>
-        </div>
-        <img src="icono.png" alt="Imagen decorativa" class="bottom-image">
+  <div class="bg">
+    <div class="container">
+      <h1>Nuestro Paseo</h1>
+      <p>Explora Caguas y Río Piedras en nuestro mapa interactivo.</p>
+      <div class="button-container">
+        <a class="button" href="https://landstudiopr.github.io/Caguasmap/">Caguas</a>
+        <a class="button" href="https://landstudiopr.github.io/Riopiedrasmap/">Río Piedras</a>
+      </div>
     </div>
+    <img src="icono.png" alt="Imagen decorativa" class="bottom-image" />
+  </div>
 </body>
 </html>

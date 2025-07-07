@@ -115,6 +115,37 @@
       background-color: #ECAB29;
     }
 
+    /* Estilo del modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 10% auto;
+      display: block;
+      max-width: 80%;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 101;
+    }
+
     @media (min-width: 768px) {
       h1 { font-size: 72px; }
       p { font-size: 20px; }
@@ -150,11 +181,16 @@
     <div class="button-container">
       <a class="button" href="https://chinchotren.github.io/Chinchotrenmap_esen/">Lugares esenciales</a>
       <a class="button" href="https://chinchotren.github.io/Chinchotremap_jangueo/">Lugares pa' janguear</a>
-      <a class="button" href="#">
-        <img src="quienes_somos.png" alt="Icono ¿Quiénes somos?">
+      <button class="button" onclick="document.getElementById('modal').style.display='block'">
         ¿Quiénes somos?
-      </a>
+      </button>
     </div>
+  </div>
+
+  <!-- Modal con la imagen -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+    <img class="modal-content" src="quienes_somos.png" alt="¿Quiénes somos?">
   </div>
 
   <!-- Script para rotar imágenes -->
